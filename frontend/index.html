@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Food Rescue Network</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- SIGNUP PAGE -->
+
+<div id="page1" class="page active">
+
+  <div class="box">
+
+    <div class="emoji">🍲🍕🥗</div>
+
+    <h1>Food Rescue Network</h1>
+
+    <p>From Waste to Worth ♻️</p>
+
+    <input
+      type="text"
+      id="username"
+      placeholder="👤 User Name">
+
+    <input
+      type="tel"
+      id="mobile"
+      placeholder="📱 +91 Mobile Number">
+
+    <input
+      type="email"
+      id="email"
+      placeholder="📧 Email Address">
+
+    <input
+      type="password"
+      id="password"
+      placeholder="🔒 Password">
+
+    <textarea
+      id="address"
+      placeholder="🏠 Home Address"></textarea>
+
+    <select id="role">
+
+      <option value="donor">
+        Donor
+      </option>
+
+      <option value="ngo">
+        NGO
+      </option>
+
+    </select>
+
+    <button onclick="goToRolePage()">
+      Signup ➜
+    </button>
+
+    <button onclick="showLoginPage()">
+      Login 🔐
+    </button>
+
+  </div>
+
+</div>
+
+<!-- ROLE PAGE -->
+
+<div id="page2" class="page">
+
+  <div class="box">
+
+    <div class="emoji">🤝🍽️</div>
+
+    <h1>Select Role</h1>
+
+    <p
+      class="welcome"
+      id="welcomeText"></p>
+
+    <button onclick="showDonorPage()">
+      🍛 Donor
+    </button>
+
+    <button onclick="showAcceptorPage()">
+      🏠 Acceptor / NGO
+    </button>
+
+    <button onclick="logoutUser()">
+      🚪 Logout
+    </button>
+
+  </div>
+
+</div>
+
+<!-- DONOR PAGE -->
+
+<div id="page3" class="page">
+
+  <div class="box">
+
+    <div class="emoji">🍔❤️</div>
+
+    <h1>Donate Food</h1>
+
+    <input
+      type="text"
+      id="foodName"
+      placeholder="🍲 Food Name">
+
+    <input
+      type="text"
+      id="foodType"
+      placeholder="🥗 Food Type">
+
+    <select id="foodCondition">
+
+      <option value="">
+        Select Food Condition
+      </option>
+
+      <option value="Healthy">
+        Healthy Food ✅
+      </option>
+
+      <option value="Spoiled">
+        Spoiled Food ❌
+      </option>
+
+    </select>
+
+    <input
+      type="text"
+      id="quantity"
+      placeholder="📦 Quantity">
+
+    <input
+      type="text"
+      id="location"
+      placeholder="📍 Location">
+
+    <button onclick="getLocation()">
+      Use Current Location 📍
+    </button>
+
+    <textarea
+      id="details"
+      placeholder="📝 Food Details"></textarea>
+
+    <select id="expiryTime">
+
+      <option value="1">
+        Expires in 1 Hour
+      </option>
+
+      <option value="2">
+        Expires in 2 Hours
+      </option>
+
+      <option value="3">
+        Expires in 3 Hours
+      </option>
+
+      <option value="5">
+        Expires in 5 Hours
+      </option>
+
+      <option value="6">
+        Expires in 6 Hour
+      </option>
+
+      <option value="7">
+        Expires in 7 Hours
+      </option>
+
+      <option value="8">
+        Expires in 8 Hours
+      </option>
+
+      <option value="9">
+        Expires in 9 Hours
+      </option>
+
+    </select>
+
+    <input
+      type="file"
+      id="foodImage">
+
+    <button onclick="submitDonation()">
+      Submit Donation 🍱
+    </button>
+
+    <button onclick="backToRole()">
+      ⬅️ Back
+    </button>
+
+  </div>
+
+</div>
+
+<!-- NGO PAGE -->
+
+<div id="page4" class="page">
+
+  <div class="emoji">🍽️🤝</div>
+
+  <h1>Available Donations</h1>
+
+  <div id="donationList"></div>
+
+  <div
+    id="emptyMessage"
+    class="empty-message">
+
+    😔 Sorry! No food donations available right now.
+
+  </div>
+  
+
+  <button
+    onclick="backToRole()"
+    style="width:200px;">
+
+    ⬅️ Back
+
+  </button>
+
+</div>
+
+<!-- LOGIN PAGE -->
+
+<div id="page5" class="page">
+
+  <div class="box">
+
+    <div class="emoji">🔐🍽️</div>
+
+    <h1>Login</h1>
+
+    <input
+      type="email"
+      id="loginEmail"
+      placeholder="📧 Email">
+
+    <input
+      type="password"
+      id="loginPassword"
+      placeholder="🔒 Password">
+
+    <button onclick="loginUser()">
+      Login ✅
+    </button>
+
+    <button onclick="backToSignup()">
+      ⬅️ Back
+    </button>
+
+  </div>
+
+</div>
+
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
