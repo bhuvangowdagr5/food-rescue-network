@@ -38,7 +38,7 @@ app.use(
 );
 
 mongoose.connect(
-  "mongodb+srv://foodadmin:food12345@cluster0.znir70e.mongodb.net/foodrescue?appName=Cluster0"
+  "mongodb+srv://foodadmin2:food12345@cluster0.znir70e.mongodb.net/foodrescue?appName=Cluster0"
 )
 
 .then(() => {
