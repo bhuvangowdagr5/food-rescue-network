@@ -507,6 +507,14 @@ io.on(
 
 );
 
+app.get("/", (req, res) => {
+
+  res.send(
+    "Food Rescue Backend Running 🚀"
+  );
+
+});
+
 server.listen(5000, () => {
 
   console.log(
