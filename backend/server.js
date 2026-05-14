@@ -507,6 +507,8 @@ io.on(
 
 );
 
+server.listen
+
 app.get("/", (req, res) => {
 
   res.send(
