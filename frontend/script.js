@@ -1,5 +1,7 @@
 const socket =
-  io("http://localhost:5000");
+  io(
+    "https://food-rescue-backend-ttr4.onrender.com"
+  );
 
 function hideAll(){
 
@@ -62,7 +64,7 @@ async function goToRolePage(){
 
   const response = await fetch(
 
-    "http://localhost:5000/signup",
+    "https://food-rescue-backend-ttr4.onrender.com/signup",
 
     {
 
@@ -230,7 +232,7 @@ formData.append(
 
 const response = await fetch(
 
-  "http://localhost:5000/donate",
+  "https://food-rescue-backend-ttr4.onrender.com/donate",
 
   {
 
@@ -304,7 +306,7 @@ async function acceptDonation(button, id){
 
     const response = await fetch(
 
-      "http://localhost:5000/accept/" + id,
+      "https://food-rescue-backend-ttr4.onrender.com/accept/" + id,
 
       {
         method: "PUT"
@@ -372,7 +374,7 @@ async function loadDonations(){
 
   const response =
     await fetch(
-      "http://localhost:5000/donations"
+      "https://food-rescue-backend-ttr4.onrender.com/donations"
     );
 
   const donations =
@@ -396,7 +398,7 @@ async function loadDonations(){
       <h3>🍱 ${item.foodName}</h3>
 
       <img
-        src="http://localhost:5000/uploads/${item.image}"
+        src="https://food-rescue-backend-ttr4.onrender.com/uploads/${item.image}"
         width="250">
 
       <p>
@@ -496,7 +498,7 @@ async function loginUser(){
 
     const response = await fetch(
 
-      "http://localhost:5000/login",
+      "https://food-rescue-backend-ttr4.onrender.com/login",
 
       {
 
