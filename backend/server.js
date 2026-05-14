@@ -38,7 +38,7 @@ app.use(
 );
 
 mongoose.connect(
-  "mongodb+srv://foodadmin2:food123456@cluster0.znir70e.mongodb.net/foodrescue?retryWrites=true&w=majority"
+  "mongodb+srv://foodadmin2:food12345@cluster0.znir70e.mongodb.net/foodrescue?retryWrites=true&w=majority"
 )
 
 .then(() => {
