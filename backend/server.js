@@ -505,7 +505,7 @@ io.on(
 
   }
 
-      );
+);
 app.get("/", (req, res) => {
 
   res.send(
