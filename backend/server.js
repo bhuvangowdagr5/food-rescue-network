@@ -43,9 +43,7 @@ mongoose.connect(
 
 .then(() => {
 
-  console.log(
-    "MongoDB Connected"
-  );
+  console.log("MongoDB Connected");
 
 })
 
